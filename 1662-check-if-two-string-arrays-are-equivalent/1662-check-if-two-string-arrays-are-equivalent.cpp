@@ -20,6 +20,6 @@ public:
             }
         }
 
-        return !lptr1 && !lptr2;
+        return wptr1 == word1.size() && wptr2 == word2.size();
     }
 };
