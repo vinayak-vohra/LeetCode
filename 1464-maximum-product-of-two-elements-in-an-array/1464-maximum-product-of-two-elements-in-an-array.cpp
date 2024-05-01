@@ -1,16 +1,7 @@
-#define len(x) x.size()
-#define sort(x) sort(x.begin(), x.end())
-
-#include <bits/stdc++.h>
-using namespace std;
-
-class Solution
-{
+class Solution {
 public:
-    int maxProduct(vector<int> &nums)
-    {
-        // sol 1
-        sort(nums);
-        return (nums[len(nums) - 1] - 1) * (nums[len(nums) - 2] - 1);
+    int maxProduct(vector<int>& nums) {
+        sort(nums.begin(), nums.end());
+        return (*nums.rbegin() - 1) * (*(nums.rbegin + 1) - 1);
     }
 };
