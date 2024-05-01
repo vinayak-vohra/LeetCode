@@ -4,7 +4,7 @@ public:
         unordered_map<string, bool> hasPath;
 
         for (vector<string>& path : paths)
-            hasPath[paths[0]] = 1, hasPath[paths[1]] |= 0;
+            hasPath[path[0]] = 1, hasPath[path[1]] |= 0;
 
         for (auto &mp : hasPath)
             if (!mp.second)
