@@ -1,6 +1,10 @@
 class Solution {
 public:
     void reverseString(vector<char>& s) {
-        reverse(s.begin(), s.end());
+        int lt = -1, rt = s.size();
+
+        while(++lt < --rt)
+            std::swap(s[lt], s[rt]);
+        
     }
 };
