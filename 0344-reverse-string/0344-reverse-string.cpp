@@ -3,9 +3,11 @@ public:
     void reverseString(vector<char>& s) {
         int lt = -1, rt = s.size();
 
-        while(++lt < --rt)
-            std::swap(s[lt], s[rt]);
-        
+        while(++lt < --rt) {
+            auto temp = s[lt];
+            s[lt] = s[rt];
+            s[rt] = temp;
+        }                    
     }
 };
 
